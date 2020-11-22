@@ -243,9 +243,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Composers\ApiConfigurationComposer.cs" />
-    <Compile Include="Controllers\AssetApiController.cs" />
-    <Compile Include="Controllers\ContentApiController.cs" />
-    <Compile Include="Controllers\PreviewApiController.cs" />
+    <Compile Include="Controllers\AssetController.cs" />
+    <Compile Include="Controllers\HammerBackofficeController.cs" />
+    <Compile Include="Controllers\HammerContentController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

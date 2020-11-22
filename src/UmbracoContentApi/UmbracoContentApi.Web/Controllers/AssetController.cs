@@ -9,11 +9,11 @@ using UmbracoContentApi.Core.Resolvers;
 namespace UmbracoContentApi.Web.Controllers
 {
     [RoutePrefix("api/assets")]
-    public class AssetApiController : UmbracoApiController
+    public class AssetController : UmbracoApiController
     {
         private readonly IMediaResolver _mediaResolver;
 
-        public AssetApiController(
+        public AssetController(
             IMediaResolver mediaResolver)
         {
             _mediaResolver = mediaResolver;
@@ -21,7 +21,7 @@ namespace UmbracoContentApi.Web.Controllers
 
         [Route("{id:guid}")]
         [ResponseType(typeof(ContentModel))]
-        public IHttpActionResult Get(Guid id)
+        public IHttpActionResult Get(string id)
         {
             IPublishedContent media = Umbraco.Media(id);
             AssetModel mediaModel = _mediaResolver.ResolveMedia(media);
