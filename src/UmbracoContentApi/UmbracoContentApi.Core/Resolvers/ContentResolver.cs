@@ -78,7 +78,7 @@ namespace UmbracoContentApi.Core.Resolvers
 
                     if (converter == null) {
                         _logger.Info<ContentResolver>($"No converter implemented for editor: {property.PropertyType.EditorAlias}");
-                        _converters.FirstOrDefault(x => x.EditorAlias.Equals("DefaultConverter"));
+                        converter = _converters.FirstOrDefault(x => x.EditorAlias.Equals("DefaultConverter"));
                     };
 
                     if (converter != null)

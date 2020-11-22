@@ -19,7 +19,7 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "abab684f7607ea8f")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "6c35ac486841ced8")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedModels
@@ -493,6 +493,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("blocks")]
 		public Umbraco.Core.Models.Blocks.BlockListModel Blocks => this.Value<Umbraco.Core.Models.Blocks.BlockListModel>("blocks");
+
+		///<summary>
+		/// CustomPicker
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("customPicker")]
+		public Newtonsoft.Json.Linq.JToken CustomPicker => this.Value<Newtonsoft.Json.Linq.JToken>("customPicker");
 	}
 
 	/// <summary>Folder</summary>

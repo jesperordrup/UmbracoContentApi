@@ -1,0 +1,28 @@
+﻿{
+    "propertyEditors": [
+        {
+            "name": "Umakers Picker (JSON)",
+            "alias": "UmakersPicker",
+            "editor": {
+                "valueType": "JSON",
+                "view": "~/App_Plugins/UmakersPicker/views/UmakersPicker.html"
+            },
+            "prevalues": {
+                "fields": [
+                    {
+                        "label": "URL for JSON file",
+                        "description": "If on same domain you can do like /REST/xxx.json - else full path",
+                        "key": "fileurl",
+                        "view": "textstring"
+                    }
+                ]
+            }
+        }
+    ],
+    "javascript": [
+        "~/App_Plugins/UmakersPicker/js/UmakersPicker.controller.js"
+    ],
+    "css": [
+        "~/App_Plugins/UmakersPicker/css/UmakersPicker.css"
+    ]
+}

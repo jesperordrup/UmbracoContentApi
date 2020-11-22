@@ -1,0 +1,16 @@
+﻿<div ng-controller="UmakersPickerController">
+
+    <div class="umb-property-editor ">
+        <div>
+            <div ng-hide="show==1" style="margin:10px 0;" ng-click="show=1">
+                <span class="pickerboxstyle" style="{{ model.value.stylesbackend }}"> {{ model.value.label }} </span>
+                <span style="padding: 10px; color: gray"> Klik for at vælge </span>
+
+            </div>
+            <div ng-show="show==1" style="margin:10px 0;">
+                <span ng-repeat="item in itemList " class="pickerboxstyle" style="{{ item.stylesbackend }}" ng-click="save(item)"> {{item.label }} </span>
+            </div>
+        </div>
+    </div>
+
+</div>

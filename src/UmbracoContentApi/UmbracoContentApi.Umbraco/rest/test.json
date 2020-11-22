@@ -1,0 +1,49 @@
+[
+  {
+    "label": "Ingen",
+    "direction": "",
+    "by": "",
+    "color": "black",
+    "background": "white",
+    "styles": "",
+    "stylesbackend": "color:black;background-color:#fff;border: 1px solid black"
+  },
+  {
+   
+    "label": "Nyeste først",
+    "direction": "desc",
+    "by": "date",
+    "color": "black",
+    "background": "white",
+    "styles": "",
+    "stylesbackend": "color:black;background-color:#fff;border: 1px solid black"
+  },
+  {
+    "label": "Ældste først",
+    "direction": "asc",
+    "by": "date",
+    "color": "black",
+    "background": "white",
+    "styles": "",
+    "stylesbackend": "color:black;background-color:#fff;border: 1px solid black"
+  },
+  {
+    "default": true,
+    "label": "Alfabetisk A-Z",
+    "direction": "asc",
+    "by": "name",
+    "color": "black",
+    "background": "white",
+    "styles": "",
+    "stylesbackend": "color:black;background-color:#fff;border: 1px solid black"
+  },
+  {
+    "label": "Alfabetisk Z-A",
+    "direction": "desc",
+    "by": "name",
+    "color": "black",
+    "background": "white",
+    "styles": "",
+    "stylesbackend": "color:black;background-color:#fff;border: 1px solid black"
+  }
+]
