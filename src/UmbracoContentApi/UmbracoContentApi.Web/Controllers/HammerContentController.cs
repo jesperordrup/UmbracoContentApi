@@ -45,7 +45,7 @@ namespace UmbracoContentApi.Web.Controllers
             return Ok(new { content = contentResolved, children = content.Children != null && levels > 1 ? GetTree(content, false, levels - 1) : null });
         }
    
-        public IHttpActionResult GetHeaders(int id, int levels = 1)
+        public IHttpActionResult GetHeaders(string id, int levels = 1)
         {
 
             IPublishedContent content = Umbraco.Content(id);
