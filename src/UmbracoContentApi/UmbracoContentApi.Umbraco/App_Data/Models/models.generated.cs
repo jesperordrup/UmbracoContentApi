@@ -19,8 +19,8 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "80fbece45d52f01f")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "abab684f7607ea8f")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedModels
 {
@@ -144,6 +144,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("approvedColor")]
 		public Umbraco.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor ApprovedColor => this.Value<Umbraco.Core.PropertyEditors.ValueConverters.ColorPickerValueConverter.PickedColor>("approvedColor");
+
+		///<summary>
+		/// BlokList content
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("blokListContent")]
+		public Umbraco.Core.Models.Blocks.BlockListModel BlokListContent => this.Value<Umbraco.Core.Models.Blocks.BlockListModel>("blokListContent");
 
 		///<summary>
 		/// Checkbox list
@@ -368,11 +375,11 @@ namespace Umbraco.Web.PublishedModels
 		public IPublishedContent Image => this.Value<IPublishedContent>("image");
 
 		///<summary>
-		/// Nested Content
+		/// Subelement
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
-		[ImplementPropertyType("nestedContent")]
-		public IEnumerable<IPublishedElement> NestedContent => this.Value<IEnumerable<IPublishedElement>>("nestedContent");
+		[ImplementPropertyType("subelement")]
+		public Umbraco.Core.Models.Blocks.BlockListModel Subelement => this.Value<Umbraco.Core.Models.Blocks.BlockListModel>("subelement");
 
 		///<summary>
 		/// Title
@@ -453,6 +460,39 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("link2")]
 		public IPublishedContent Link2 => this.Value<IPublishedContent>("link2");
+	}
+
+	/// <summary>Blocklistonly</summary>
+	[PublishedModel("blocklistonly")]
+	public partial class Blocklistonly : PublishedContentModel
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public new const string ModelTypeAlias = "blocklistonly";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Blocklistonly, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public Blocklistonly(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+
+		///<summary>
+		/// Blocks
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("blocks")]
+		public Umbraco.Core.Models.Blocks.BlockListModel Blocks => this.Value<Umbraco.Core.Models.Blocks.BlockListModel>("blocks");
 	}
 
 	/// <summary>Folder</summary>

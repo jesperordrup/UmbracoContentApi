@@ -19,7 +19,24 @@ namespace UmbracoContentApi.Web.Controllers
         {
             _contentResolver = contentResolver;
         }
+        [ResponseType(typeof(ContentModel))]
+        public IHttpActionResult GetById(int id, int level = 0)
+        {
+            IPublishedContent content = Umbraco.Content(id);
+            var dictionary = new Dictionary<string, object>
+            {
+                { "addUrl", true }
+            };
 
+            if (level <= 0)
+            {
+                return Ok(_contentResolver.Value.ResolveContent(content, dictionary));
+            }
+
+            dictionary.Add("level", level);
+
+            return Ok(_contentResolver.Value.ResolveContent(content, dictionary));
+        }
         [Route("{id:guid}")]
         [ResponseType(typeof(ContentModel))]
         public IHttpActionResult Get(Guid id, int level = 0)

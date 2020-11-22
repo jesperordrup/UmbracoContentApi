@@ -6,5 +6,6 @@ namespace UmbracoContentApi.Core.Models
     {
         public SystemModel System { get; set; }
         public Dictionary<string, object> Fields { get; set; }
+        public ContentModel Settings { get; set; }
     }
 }

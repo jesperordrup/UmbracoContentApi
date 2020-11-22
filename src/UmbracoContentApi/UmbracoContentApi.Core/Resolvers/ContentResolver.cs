@@ -75,11 +75,17 @@ namespace UmbracoContentApi.Core.Resolvers
                 {
                     IConverter converter =
                         _converters.FirstOrDefault(x => x.EditorAlias.Equals(property.PropertyType.EditorAlias));
+
+                    if (converter == null) {
+                        _logger.Info<ContentResolver>($"No converter implemented for editor: {property.PropertyType.EditorAlias}");
+                        _converters.FirstOrDefault(x => x.EditorAlias.Equals("DefaultConverter"));
+                    };
+
                     if (converter != null)
                     {
                         object prop = property.Value();
 
-                        if (prop == null)
+                        if (prop == null || prop.GetType().FullName.Equals("Umbraco.Core.Udi[]"))
                         {
                             continue;
                         }

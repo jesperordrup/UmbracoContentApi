@@ -21,5 +21,7 @@ namespace UmbracoContentApi.Core.Models
         public string Locale { get; set; }
 
         public string Url { get; set; }
+
+        
     }
 }
