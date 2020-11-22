@@ -61,6 +61,7 @@ namespace UmbracoContentApi.Core.Resolvers
                     contentModel.System.Locale = _variationContextAccessor.VariationContext.Culture;
                     contentModel.System.Name = publishedContent.Name;
                     contentModel.System.UrlSegment = publishedContent.UrlSegment;
+                    contentModel.System.Path = publishedContent.Path;
 
                     if (options != null && 
                         options.ContainsKey("addUrl") &&
